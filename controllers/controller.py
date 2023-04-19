@@ -8,5 +8,10 @@ def index():
 
 @app.route('/orders/<index>')
 def single_order(index):
-    return render_template('order.jinja', title = f"Single Order {index}")
+    return render_template('order.jinja', title=f"Order #{index}", index = index, order=order_list[int(index)])
+
+
+
+# def single_order(index):
+#     return render_template('order.jinja', title = f"Single Order {index}", order_list = order_list, index = index)
 

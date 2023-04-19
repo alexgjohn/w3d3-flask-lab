@@ -9,19 +9,23 @@
     <body>
         <h1>Single Order</h1>
         <h2>Single Order {{ index|int }}</h2>
-        {% for order in order_list %}
 
-            {% if index(order) == index %}
-
-                <p> {{order}} </p>
-
-            {% else %}
-
-            <p>Page not found</p>
-
+        <p>
+        {{ order.customer_name }}
+        </p>
+        <p>
+        {{ order.order_date }}
+        </p>
+        <p>
+        {{ order.quantity }}
+        </p>
+        {# {% for order in order_list %}
+            {% if loop.index == index %}
+                <p> {{ order.customer_name }}</p>
             {% endif %}
+        {% endfor %} #}
+    
 
-        {% endfor %}
 
         
 
